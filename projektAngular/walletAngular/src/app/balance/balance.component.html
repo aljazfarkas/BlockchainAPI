@@ -1,0 +1,15 @@
+<div>
+    <h4>Stanje: {{balance}} kovancev</h4>
+    <h5>Naslov: {{publicKey}}</h5>
+</div>
+<div class="chart-wrapper">
+    <canvas baseChart 
+        [datasets]="lineChartData" 
+        [labels]="lineChartLabels" 
+        [options]="lineChartOptions"
+        [colors]="lineChartColors" 
+        [legend]="lineChartLegend" 
+        [chartType]="lineChartType" 
+        [plugins]="lineChartPlugins">
+    </canvas>
+</div>

@@ -1,0 +1,27 @@
+<p *ngIf="transactions.length == 0">Ni transakcij.</p>
+<ul class="list-group">
+    <li class="list-group-item transaction list-group-item-info round" *ngFor="let transaction of transactions">
+        Transaction ID: {{transaction.id}}
+        <ul class="list-group-item round">
+            txIns:
+            <ul class="list-group-item round">
+                <li class="list-group-item round" *ngFor="let txIn of transaction.txIns">
+                    <ul>
+                        <li class="list-group-item">Signature: {{txIn.signature}}</li>
+                        <li class="list-group-item">TxOutId: {{txIn.txOutId}}</li>
+                        <li class="list-group-item">TxOutIndex: {{txIn.txOutIndex}}</li>
+                    </ul>
+                </li>
+            </ul>
+            txOuts:
+            <ul class="list-group-item round">
+                <li *ngFor="let txOut of transaction.txOuts" class="list-group-item round">
+                    <ul>
+                        <li class="list-group-item">Address: {{txOut.address}}</li>
+                        <li class="list-group-item">Amount: {{txOut.amount}}</li>
+                    </ul>
+                </li>
+            </ul>
+        </ul>
+    </li>
+</ul>

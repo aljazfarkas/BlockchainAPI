@@ -1,0 +1,8 @@
+.transaction{
+    margin: 10px;
+}
+
+.list-group-item{
+    word-wrap: break-word;
+    padding: 10px;
+}
